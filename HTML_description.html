@@ -11,7 +11,6 @@
         HTML5自学文档
     </title>
 </head>
-
 <!-- body块 -->
 <body>
 <h1>基本元素介绍</h1>
@@ -70,5 +69,116 @@
 <p>使用 base 定义页面中所有链接默认的链接目标地址。</p>
 <p>使用 meta 元素来描述HTML文档的描述，关键词，作者，字符集等</p>
 <p>使用 style 直接对HTML文件运用CSS样式</p>
+
+<h1>HTMLCSS</h1>
+<p>内联样式通过在元素中添加style属性</p>
+<p>背景颜色/字体/字体颜色/字体大小/文本对齐方式</p>
+<h2>内部样式表</h2>
+<p>添加在head块当中</p>
+<h2>外部样式表</h2>
+<p>调用外部CSS文件</p>
+
+<h1>HTML图像</h1>
+<p>图像标签是src</p>
+<p>源属性src说明图片来源</p>
+<p>alt属性，当图片无法加载的时候输出的内容</p>
+<p>height&width设置图像的高和宽</p>
+<h1>HTML表格</h1>
+<p>tr 是 table row 的缩写，表示表格的一行。</p>
+<p>td 是 table data 的缩写，表示表格的数据单元格。</p>
+<p>th 是 table header的缩写，表示表格的表头单元格。</p>
+<table border="1">
+    <thead>
+    <tr>
+        <!-- 表头部分 -->
+        <th>列标题1</th>
+        <th>列标题2</th>
+        <th>列标题3</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>行1，列1</td>
+        <td>行1，列2</td>
+        <td>行1，列3</td>
+    </tr>
+    <tr>
+        <td>行2，列1</td>
+        <td>行2，列2</td>
+        <td>行2，列3</td>
+    </tr>
+    </tbody>
+</table>
+<p>thead用于定义表格的标题部分,表头，table head</p>
+<p>tbody用于定义表格的主体部分, table body</p>
+<h2>HTML表格和边框属性</h2>
+<p>使用border来定义表格边框及其对应粗细度</p>
+
+<h1>HTML列表</h1>
+<h2>无序列表</h2>
+<p>无序列表使用 ul 标签</p>
+<p>列表元素用li标签，list item</p>
+<h2>无序列表</h2>
+<p>无序列表使用 ol 标签</p>
+<h2>HTML自定义列表</h2>
+<p>自定义列表以 dl 标签开始。每个自定义列表项以 dt 开始。每个自定义列表项的定义以 dd 开始。</p>
+<p>dl: describe list 描述列表标签，即自定义列表</p>
+<p>dt: describe title</p>
+<p>dd: describe data</p>
+
+<h1>HTML区块</h1>
+<p>大多数 HTML 元素被定义为<b>块级元素或内联元素</b>。</p>
+<p>div元素，块级元素，定义了文档的区域，对块内区域进行修饰</p>
+<p>span元素，用来组合文档中的行内元素， 内联元素(inline) 对行内元素进行修饰</p>
+
+<h1>HTML布局</h1>
+<p>使用div元素进行布局</p>
+<p>使用表格进行布局</p>
+<p>使用 CSS 最大的好处是，如果把 CSS 代码存放到外部样式表中，那么站点会更易于维护。通过编辑单一的文件，就可以改变所有页面的布局。</p>
+<p>由于创建高级的布局非常耗时，使用模板是一个快速的选项。以使用这些预先构建好的网站布局，并优化它们</p>
+
+<h1>HTML表单和输入</h1>
+<p>以下是一个简单的HTML表单的例子：</p>
+<dl>
+    <dt>form 元素用于创建表单</dt>
+        <dd>action 属性定义了表单数据提交的目标 URL</dd>
+        <dd>method 属性定义了提交数据的 HTTP 方法</dd>
+    <dt>label 元素用于为表单元素添加标签，提高可访问性。</dt>
+    <dt>input 元素是最常用的表单元素之一，它可以创建文本输入框、密码框、单选按钮、复选框等。</dt>
+        <dd>type 属性定义了输入框的类型</dd>
+        <dd>id 属性用于关联 label 元素</dd>
+        <dd>name 属性用于标识表单字段</dd>
+    <dt>select 元素用于创建下拉列表</dt>
+    <dt>option 元素用于定义下拉列表中的选项。</dt>
+</dl>
+
+<h1>HTML框架</h1>
+<p>通过使用框架，你可以在同一个浏览器窗口中显示不止一个页面。</p>
+<h2>iframe - 设置高度与宽度</h2>
+<p>height 和 width 属性用来定义iframe标签的高度与宽度。</p>
+<h2>iframe - 移除边框</h2>
+<p>frameborder 属性用于定义iframe表示是否显示边框。</p>
+<h2>使用 iframe 来显示目标链接页面</h2>
+<p>iframe 可以显示一个目标链接的页面</p>
+
+<h1>HTML颜色</h1>
+
+<h1>HTML脚本</h1>
+<p>JavaScript 使 HTML 页面具有更强的动态和交互性。</p>
+<h2>HTML script 标签</h2>
+<p>script 标签用于定义客户端脚本，比如 JavaScript。</p>
+<p>script 元素既可包含脚本语句，也可通过 src 属性指向外部脚本文件。JavaScript 最常用于图片操作、表单验证以及内容动态更新。</p>
+<p>noscript 标签提供无法使用脚本时的替代内容，比方在浏览器禁用脚本时，或浏览器不支持客户端脚本时。</p>
+<p>noscript 元素可包含普通 HTML 页面的 body 元素中能够找到的所有元素。只有在浏览器不支持脚本或者禁用脚本时，才会显示 noscript 元素中的内容</p>
+
+<h1>HTML字符实体</h1>
+<p>如果希望正确地显示预留字符，我们必须在 HTML 源代码中使用字符实体</p>
+<p>如需显示小于号，我们必须这样写：&lt; 或 &#60; 或 &#060;</p>
+<p>不间断空格</p>
+
+<h1>HTML统一资源定位器</h1>
+<h2>URL - 统一资源定位器</h2>
+<p>Web浏览器通过URL从Web服务器请求页面。</p>
+
 </body>
 </html>
