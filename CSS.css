@@ -205,3 +205,439 @@ th
     background-color: green;
     color:white;
 }
+
+/* CSS盒子模型
+Margin(外边距）
+Border（边框）
+Padding（内边距）
+Content（内容）*/
+div{
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+}
+
+
+/* CSS边框 */
+/* CSS 边框属性 */
+/* border-style指定边框类型 */
+
+/* border-color指定颜色 */
+/* name-指定颜色名称；
+    RGB-指定RGB值；
+    Hex-指定16进制值
+ */
+
+/* 边框-单独设置各边 */
+p{
+    border-top-style: groove;
+    border-right-style: groove;
+    border-left-style: groove;
+    border-bottom-style: groove;
+}
+
+/*
+border-style:dotted solid double dashed;
+上边框是 dotted
+右边框是 solid
+底边框是 double
+左边框是 dashed
+ */
+
+
+/* CSS轮廓（outline）
+    outline-color:设置轮廓的颜色
+    outline-style:设置轮廓的样式
+    outline-width:设置轮廓的宽度
+ */
+
+
+/* CSS margin外边距
+用于清除周围的元素区域
+ */
+p{
+    margin:25px 50px 75px 100px;/* 上右下左*/
+}
+p{
+    margin:25px 50px 50px; /* 上25 左右50 下50 */
+}
+p{
+    margin:25px 50px; /* 上下25 左右50 */
+}
+
+
+/* CSS padding填充 内边距*/
+/*
+相同的上右下左
+ */
+p{
+    padding:25px 50px;
+    /*
+    上下
+     */
+}
+
+
+/* CSS分组和嵌套选择器 */
+h1 {
+    color:green;
+}
+h2 {
+    color:green;
+}
+p {
+    color:green;
+}
+/*
+上下相同
+ */
+h1, h2, p{
+    color:green;
+}
+
+/*
+嵌套选择器
+p为p元素指定样式
+.marked{}为所有class="marked"的元素指定一个样式
+.marked p{}为所有class="marked"元素内的p元素指定一个样式
+p.marked{}为所有class="marked"的p元素指定一个样式
+ */
+
+/*
+CSS 尺寸Dimension
+height高度
+line-height行高
+max-height最大高
+max-width最大宽
+min-height最小高
+min-width最小宽
+width宽
+ */
+
+/*
+CSS Display显示与Visibility可见性
+ */
+h1.hidden{visibility:hidden;}
+/*
+visibility:hidden可以隐藏某个元素，
+但是隐藏的元素仍占用与未隐藏前一样的空间。
+隐藏了->仍然占用空间
+ */
+
+h1{
+    display:none;
+}
+/*
+display:none可以隐藏某个元素，且隐藏的元素不会占用任何空间
+元素不但被隐藏了->占用的空间也从页面布局中消失了。
+ */
+/*
+display:inline 水平显示
+display:block 不允许有内部的嵌套块元素
+ */
+
+
+/*
+CSS Position定位
+static 默认值，没有定位
+relative 相对定位元素的定位：相对于正常位置的移动
+fixed 相对于浏览器窗口固定位置；不受窗口滚动影响
+absolute相对于最近的已定位父元素：绝对定位
+sticky：粘性定位，依赖于用户的滚动；在relative和fixed之间切换
+ */
+/* 重叠的元素
+z-index:指定元素堆叠顺序；
+    可以有正数或负数的堆叠顺序
+ */
+
+
+/* CSS Overflow 布局
+用于控制内容溢出元素框时显示的方式
+可以控制内容溢出时在对应的元素区间内添加滚动条
+visible：默认值。内容不会被修剪，会呈现在元素框之外
+hidden：内容会被修剪，并且其余内容是不可见的
+scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余内容
+auto：如果内容被修剪则浏览器会显示滚动条以便查看其余内容
+inherit：规定应该从父元素继承overflow属性的值
+*/
+
+/* CSS Float浮动
+通常用于图像布局
+ */
+img{
+    float:right;
+}
+/* 图像是右浮动，文本将环绕在左侧 */
+
+/* 清除浮动 - 使用clear
+元素浮动之后，周围元素会重新排列，
+为了避免这种情况，使用clear属性
+该属性指定元素两侧不能出现浮动元素
+*/
+.text_line{
+    clear:both;
+}
+
+/* CSS布局-水平&垂直对齐 */
+/* 元素居中对齐
+可以使用 margin：auto 将两边的空外边距平均分配
+ */
+/* 文本居中对齐
+text-align: center
+ */
+/* 图片居中对齐
+使用margin：auto将图片放到块元素中
+ */
+
+
+/* CSS组合选择符
+CSS3包含四种组合方式
+后代选择器（以空格分隔）
+子元素选择器（以大于号分隔）
+相邻兄弟选择器（以加号分隔）
+普通兄弟选择器（以波浪号分隔）
+ */
+
+
+/* CSS伪类 Pseudo-classes
+selector：pseudo-class{
+    property:value;
+}
+ */
+
+/* 伪类和CSS类可以配合使用 */
+a.red:visited {color:#FF0000;}
+
+/* CSS:first-child伪类
+用于选择父元素的第一个子元素
+ */
+p>i:first-child{
+    color:blue;
+}
+
+/* CSS-:lang伪类
+:lang伪类使你有能力为不同的语言定义特殊的规则
+ */
+
+/* CSS伪元素
+是一种特殊的选择器，
+可以在不改变HTML结构的情况下对页面元素的特定部分进行样式设置
+常用的CSS伪元素有
+::before 在元素内容前插入一幅新内容
+::after 在元素内容后插入新内容
+::first-line 向文本的首行设置特殊样式
+::first-letter 向文本的首字母设置特殊样式
+伪元素的语法
+selector::pseudo-element{
+    property: value;
+}
+ */
+p:first-line{
+    color:#ff0000;
+    font-variant:small-caps;
+}
+
+/* CSS导航栏
+导航栏 = 链接列表
+ */
+/* list-style-type:none
+    移除列表前小标志
+ */
+
+/* 垂直导航栏 链接+边框设计 */
+/* 水平导航栏
+    使用内联inline或浮动float的列表项
+    如果想链接到具有相同的大小，必须使用浮动的方法
+ */
+
+
+/* 下拉菜单
+ */
+
+
+/* CSS提示工具 Tooltip */
+
+
+/* CSS属性选择器
+    用于根据属性或属性值来选择HTML元素
+    [attribute]:
+        选择带有指定属性的所有元素
+ */
+[type]{
+    border: 1px solid;
+}
+
+/* [attribute="value]
+    选择具有指定属性和值完全匹配的元素
+ */
+[type="text"]{
+    background-color:white;
+}
+
+/* [attribute~="value"]
+    选择属性值中包含指定词的元素
+    以空格分隔的词列表之一
+ */
+[class~="button"]{
+    font-weight: bold;
+}
+
+/* [attribute|="value"]
+    具有指定值或者以指定值开头并紧跟-的值的属性
+    常用语语言代码
+ */
+[lang|="en"]{ /* en或en-开头 */
+    color:blue;
+}
+
+/* [attribute^="value"]
+    选择属性值以指定值开头的元素
+ */
+[href^="https"] {
+    text-decoration: none;
+}
+
+/* [attribute$="value]
+    选择属性值以指定值结尾的元素
+ */
+[src$=".jpg"] {
+    border: 2px solid blue;
+}
+
+/* [attribute *= "value"]
+    选择属性值中包含指定值的元素
+    更模糊灵活，不必一定要空格分开
+ */
+[title*="tutorial"]{
+    font-style:italic;
+}
+
+/* 属性选择器
+ 把包含标题属性的所有元素变为蓝色
+ */
+[title]{
+    color:blue;
+}
+
+/* 表单样式
+    属性选择器样式无需使用class或id的形式
+ */
+input[type="text"]
+{
+    width:150px;
+    display:block;
+    margin-bottom:10px;
+    background-color:yellow;
+}
+input[type="button"]
+{
+    width:120px;
+    margin-left:35px;
+    display:block;
+}
+
+
+/* CSS表单
+CSS transition属性 添加动画
+ */
+
+/* 文本框 textarea 样式 */
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none; /* 禁用文本框可以重置大小的功能 */
+}
+
+/* 下拉菜单 select样式 */
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+/* 响应式表单
+    根据浏览器窗口的大小重新布局各个元素
+ */
+/* 响应式布局 layout - 在屏幕宽度小于 600px 时， 设置为上下堆叠元素 */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+
+/* CSS计数器
+    通过一个变量来设置，根据规则递增变量。
+    counter-reset - 创建或者重置计数器
+    counter-increment - 递增变量
+    content - 插入生成的内容
+    counter() 或 counters() 函数 - 将计数器的值添加到元素
+ */
+
+
+/* CSS 网页布局
+    头部区域
+    菜单导航区域
+    内容区域
+    底部区域
+ */
+
+/* 头部区域 */
+.header {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 菜单导航区域 */
+/* 导航条 */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* 导航链接 */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* 链接 - 修改颜色 */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+/* CSS !important 规则
+    用于增加样式的权重
+    使用一个 !important 规则时，此声明将覆盖任何其他声明。
+ */
+#myid {
+    background-color: blue;
+}
+
+.myclass {
+    background-color: gray;
+}
+
+p {
+    background-color: red !important;
+}
+/* 使用 !important 是一个坏习惯，应该尽量避免，
+因为这破坏了样式表中的固有的级联规则
+使得调试找 bug 变得更加困难了。
+ */
