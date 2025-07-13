@@ -236,3 +236,172 @@ outerloop:
 
 
 /* JavaScript typeof */
+/* 返回值类型：
+undefined 未定义
+boolean 布尔值
+number 数字类型
+string 字符串
+object 对象、数组、null
+function 函数
+symbol ES6新增符号类型
+bigint ES2020新增大整数类型
+ */
+
+/* null和undefined的值相等，但是类型不等 */
+
+
+/* JS数据类型
+6种数据类型：string，number，boolean，object，function，symbol
+3种对象类型：Object，Date，Array
+2个不包含任何值的数据类型：null，undefined
+ */
+
+/* constructor属性返回所有JavaScript变量的构造函数
+*   也可用于判断JS变量类型*/
+
+/* JS类型转换
+String() 转换成字符串
+ */
+
+/* Number()
+数字转换为数字
+空字符串转换为0
+其他字符串转换为NaN
+ */
+
+/* 一元运算符
++可以用于将变量转换为数字
+ */
+
+/* 自动转换类型
+5 + null 返回 5
+"5" + null 返回“5null”
+"5" + 1 返回“51”
+"5" - 1 返回4
+ */
+
+/* toString() 自动转换为字符串 */
+
+
+/* JavaScript正则表达式 */
+/* 正则表达式通常用于两个字符串方法：
+    search()
+        用于检索字符串中指定的子字符串
+        或检索与正则表达式相匹配的子字符串
+        并返回子串的起始位置
+    replace()
+        用于在字符串中用一些字符串替换另一些字符串，
+        或替换一个与正则表达式匹配的子串。
+ */
+
+/* search()方法使用正则表达式 */
+var str = "Visit Runoob!";
+var n = str.search(/Runnoob/i);
+// return 6
+
+// search() 方法使用字符串
+var str = "Visit Runoob!";
+var n =  str.search("Runoob");
+// 字符串参数会转换为正则表达式
+
+// replace方法使用正则表达式
+var str = document.getElementById("demo").innerHTML;
+var txt = str.replace(/microsoft/i,"Runoob");
+// 将不区分大小写把Microsoft替换为Runoob
+
+// replace方法使用字符串
+var str = document.getElementById("demo").innerHTML;
+var txt = str.replace("Microsoft","Runoob");
+
+// 正则表达式代替字符串使得搜索功能更加强大。
+
+/* 正则表达式修饰符
+i：执行对大小写不敏感的匹配
+g：执行全局匹配 查找所有匹配而非在找到第一个匹配后停止
+m：执行多行匹配
+ */
+
+/* 正则表达式模式
+[abc] 查找方括号之间的任何字符
+[0-9] 查找任何从0至9的数字
+(x|y) 查找任何以｜分隔的选项
+\d 查找数字
+\s 查找空白字符
+\b 匹配单词边界
+\uxxxx 查找以16进制数xxxx规定的Unicode字符
+n+ 匹配任何包含至少一个n的字符串
+n* 匹配任何包含零个或多个n的字符串
+n? 匹配任何包含零个或一个n的字符串
+ */
+
+// 使用RegExp对象
+// RegExp对象是一个预定义了属性和方法的正则表达式对象
+
+// 使用test() 正则表达式方法
+/* 用于检测一个字符串是否匹配某个模式
+    如果字符串中含有匹配的文本 则返回true 否则返回false
+ */
+var patt = /e/;
+patt.test("The best things in life are free!");
+// 相同的效果
+/e/.test("The best things in life are free!")
+
+/* 使用exec() 正则表达式方法
+    用于检索字符串中的正则表达式的匹配
+    该函数返回一个数组，其中存放匹配的结果
+    若未找到匹配，则返回为null
+ */
+
+
+/* Js 错误
+try语句测试代码块的错误
+catch语句处理错误
+throw语句创建自定义错误
+finally 无论是否有触发异常该语句都会执行
+ */
+
+
+/* JavaScript调试
+* console.log()打印JavaScript的值
+* 调试窗口设置断点
+* debugger关键字，与设置断点的效果相同*/
+
+
+/* JavaScript声明提升：变量可以在使用后声明
+    初始化不会提升，只有声明的部分会提升
+ */
+
+
+/* JavaScript严格模式 use strict
+    即在严格的条件下运行
+ */
+// 通过在脚本或函数的头部添加use strict表达式来声明
+
+/* 为什么使用严格模式
+    消除语法的一些不合理、不严谨之处，减少一些怪异行为
+    消除代码运行的一些不安全之处，保证代码运行的安全
+    提高编译器效率，增加运行速度
+    为未来新版本的JavaScript做好铺垫
+ */
+
+/* 严格模式具体要求
+    不允许使用未声明的变量，包括对象
+    不允许删除变量或对象
+    不允许删除函数
+    不允许变量重名
+    不允许使用八进制
+    不允许使用转义字符
+    不允许对只读属性赋值
+    不允许对一个使用getter方法读取的属性进行赋值
+    不允许删除一个不允许删除的属性
+    变量名不能使用eval字符串
+    变量名不能使用arguments字符串
+    在作用域eval()创建的变量不能被调用
+ */
+
+
+/* JavaScript 表单
+表单验证
+数据验证
+约束验证
+ */
