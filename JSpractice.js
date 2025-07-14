@@ -405,3 +405,48 @@ finally 无论是否有触发异常该语句都会执行
 数据验证
 约束验证
  */
+
+
+/* JavaScript this 关键字
+在方法中，this表示该方法所属的对象
+单独使用，this表示全局对象
+在函数中，this表示全景对象
+函数中，严格模式下，this是未定义的
+在事件中，this表示接收事件的元素
+
+*/
+
+
+/* JavaScript JSON
+    JSON是用于存储和传输数据的格式
+    JSON通常用于服务端向网页传输数据
+    JSON：JavaScript Object Notation
+
+    相关函数：
+    JSON.parse() 用于将一个JSON字符串转换为JavaScript对象
+    JSON.stringify() 用于将JavaScript值转换为JSON字符串
+ */
+
+
+/* JavaScript异步编程
+    通过回调函数来实现异步任务的结果处理
+ */
+setTimeout(print,3000);
+
+
+/* JavaScript Promise
+    承诺，表示将来某一个时间点会返回一个结果
+    三种状态：
+    pending：初始状态，既不是成功，也不是失败
+    fulfilled：意味着操作成功完成
+    rejected：意味着操作失败
+ */
+
+/* Promise的使用方法
+    then方法
+    用于指定Promise状态变为fulfilled或rejected时的回调函数
+    catch方法
+    专门用于处理Promise被拒绝的情况
+    finally方法
+    无论最终状态如何都会执行
+ */
